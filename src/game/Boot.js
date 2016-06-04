@@ -21,7 +21,8 @@ Hunted.Boot.prototype = {
             this.scale.enterIncorrectOrientation.add(this.enterIncorrectOrientation, this);
             this.scale.leaveIncorrectOrientation.add(this.leaveIncorrectOrientation, this);
         } 
-    }
+    },
+    
     preload: function () {
         //  Here we load the assets required for our preloader (in this case a background and a loading bar)
         // this.load.image('preloaderBackground', 'images/preloader_background.jpg');
