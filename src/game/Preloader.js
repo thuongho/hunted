@@ -9,7 +9,7 @@ Hunted.Preloader = function (game) {
 Hunted.Preloader.prototype = {
 
     preload: function () {
-        this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBar');
+        this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY + 100, 'preloaderBar');
         this.preloadBar.anchor.setTo(0.5);
         this.load.setPreloadSprite(this.preloadBar);
 
@@ -26,5 +26,6 @@ Hunted.Preloader.prototype = {
 
     update: function () {
         this.ready = true;
+        this.state.start('StartMenu');
     }
 };

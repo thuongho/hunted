@@ -8,16 +8,16 @@ Hunted.StartMenu = function (game) {
 Hunted.StartMenu.prototype = {
 
     create: function () {
-        startBG = this.add.image(0, 0, 'menuScreen');
-        startBG.inputEnabled = true;
-        startBG.events.onInputDown.addOnce(this.startGame, this);
+        this.startBG = this.add.image(0, 0, 'menuScreen');
+        this.startBG.inputEnabled = true;
+        this.startBG.events.onInputDown.addOnce(this.startGame, this);
 
-        startPrompt = this.add.bitmapText(
-            this.world.centerX, 
+        this.startPrompt = this.add.bitmapText(
+            this.world.centerX - 215, 
             this.world.centerY, 
             'funera',
             'Touch to start the hunt',
-            24
+            75
         );
     },
 
