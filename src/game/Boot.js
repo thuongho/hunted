@@ -24,13 +24,12 @@ Hunted.Boot.prototype = {
     },
     
     preload: function () {
-        //  Here we load the assets required for our preloader (in this case a background and a loading bar)
-        // this.load.image('preloaderBackground', 'images/preloader_background.jpg');
-        // this.load.image('preloaderBar', 'images/preloader_bar.png');
+        this.load.image('titleImage', '../../assets/images/hunted_title_blk.png');
+        this.load.image('preloaderBar', '../../assets/images/loading_bar.png');
     },
 
     create: function () {
-        // this.state.start('Preloader');
+        this.state.start('Preloader');
     },
 
     enterIncorrectOrientation: function () {
