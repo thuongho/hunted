@@ -16,7 +16,8 @@ Hunted.Preloader.prototype = {
         this.titleText = this.add.image(this.world.centerX, this.world.centerY, 'titleImage');
         this.titleText.anchor.setTo(0.5);
 
-
+        this.load.image('menuScreen', '../../assets/images/hunted_titleBG.jpg');
+        this.load.bitmapFont('funera', '../../assets/fonts/funera.png', '../../assets/fonts/funera.fnt');
     },
 
     create: function () {
