@@ -9,6 +9,7 @@
     game.state.add('Boot', Hunted.Boot);
     game.state.add('Preloader', Hunted.Preloader);
     game.state.add('StartMenu', Hunted.StartMenu);
+    game.state.add('Game', Hunted.Game);
 
     game.state.start('Boot');
 })();
