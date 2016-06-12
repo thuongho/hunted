@@ -18,6 +18,9 @@ Hunted.Preloader.prototype = {
 
         this.load.image('menuScreen', '../../assets/images/hunted_titleBG.jpg');
         this.load.bitmapFont('funera', '../../assets/fonts/funera.png', '../../assets/fonts/funera.fnt');
+
+        this.load.image('male_player', '../../assets/images/male_hunter.png');
+        this.load.image('female_player', '../../assets/images/female_hunter.png');
     },
 
     create: function () {
