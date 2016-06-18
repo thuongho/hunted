@@ -21,6 +21,8 @@ Hunted.Preloader.prototype = {
 
         this.load.image('male_player', '../../assets/images/male_hunter.png');
         this.load.image('female_player', '../../assets/images/female_hunter.png');
+
+        this.load.atlasXML('rodent', '../../assets/images/spritesheets/bunny.png', '../../assets/images/spritesheets/bunny.xml');
     },
 
     create: function () {
