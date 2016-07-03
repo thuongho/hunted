@@ -4,6 +4,7 @@ Hunted.Game = function (game) {
     this.character;
     this.totalRodents;
     this.rodentGroup;
+    this.controller;
 };
 
 Hunted.Game.prototype = {
@@ -19,7 +20,12 @@ Hunted.Game.prototype = {
         this.character.anchor.setTo(0.5);
         this.character.scale.setTo(0.2);
 
+        this.buildControls();
         this.buildRodents();
+    },
+
+    buildControls: function () {
+        this.controller = this.input.keyboard.createCursorKeys();
     },
 
     buildRodents: function () {
@@ -73,5 +79,17 @@ Hunted.Game.prototype = {
         }
     },
 
-    update: function () {}
+    update: function () {
+        if (this.controller.left.isDown) {
+            this.character.x -= 4;
+        } else if (this.controller.right.isDown) {
+            this.character.x += 4;
+        }
+
+        if (this.controller.up.isDown) {
+            this.character.y -= 4;
+        } else if (this.controller.down.isDown) {
+            this.character.y += 4;
+        }
+    }
 };
