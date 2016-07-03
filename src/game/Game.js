@@ -28,6 +28,20 @@ Hunted.Game.prototype = {
         this.controller = this.input.keyboard.createCursorKeys();
     },
 
+    buildKeyboardMovements: function () {
+        if (this.controller.left.isDown) {
+            this.character.x -= 4;
+        } else if (this.controller.right.isDown) {
+            this.character.x += 4;
+        }
+
+        if (this.controller.up.isDown) {
+            this.character.y -= 4;
+        } else if (this.controller.down.isDown) {
+            this.character.y += 4;
+        }
+    },
+
     buildRodents: function () {
         this.rodentGroup = this.add.group();
         this.rodentGroup.enableBody = true;
@@ -80,16 +94,6 @@ Hunted.Game.prototype = {
     },
 
     update: function () {
-        if (this.controller.left.isDown) {
-            this.character.x -= 4;
-        } else if (this.controller.right.isDown) {
-            this.character.x += 4;
-        }
-
-        if (this.controller.up.isDown) {
-            this.character.y -= 4;
-        } else if (this.controller.down.isDown) {
-            this.character.y += 4;
-        }
+        this.buildKeyboardMovements();
     }
 };
